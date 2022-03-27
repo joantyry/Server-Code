@@ -11,7 +11,8 @@ a. Create an Ubuntu virtual machine on Microsoft Azure (azure.microsoft.com)
 b. Install Apache Server
 c. Generate self signed certificates to use "https" instead of http.
 d. Install Python and dependent packages: Cython, requests, sympy etc.
-e. Enable CGI's so as to execute Python and C++ codes as follows:
+e. Install C++ NTL library https://libntl.org/doc/tour-unix.html.
+f. Enable CGI's so as to execute Python and C++ codes as follows:
 
 i) In the file /etc/apache2/conf-enabled/serve-cgi-bin.conf
 
@@ -36,7 +37,7 @@ b. On a web browser enter your router's ip address and hit enter. You will be as
 c. Once you login, used DHCP protocol to reserve/assign an IP address to the machine based on its MAC addresses.
 d. Select a port (large enough and not 8080) and set up traffic forwarding to this IP address based on the port selected.
 e. To get the router's external IP address, type \textit{whatismyip.com} on the browser. This is the public IP address that will be used to access the localhost server on your machine online, one has to just specify the port number you selected to reach the intended server for example http://174.0.246.67:9000/
-f. Follow steps c to d in (1.)
+f. Follow steps c to e in (1.)
 g.   Enable CGI's so as to execute Python and C++ codes as follows:
     i) In the file httpd.conf file add ”AddHandler cgi-script .py"
     ii) Restart apache server
